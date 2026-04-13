@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ITZFIZZ — Scroll Animation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <section id="hero">
+
+    <nav class="navbar">
+      <div class="nav-logo">
+        <div class="nav-logo-icon">IF</div>
+        <span class="nav-logo-name">ITZFIZZ Digital</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <span class="nav-copy">©2026 Kunal Malviya. All rights reserved.</span>
+    </nav>
+
+    <div class="hero-body">
+
+      <!-- Headline -->
+      <div class="hero-title-wrap" id="titleWrap">
+        <h1 class="hero-title" id="heroTitle" aria-label="WELCOME ITZFIZZ"></h1>
+        <p class="hero-tagline" id="tagline">Digital Agency · Premium Experiences</p>
+      </div>
+
+      <!-- Car SVG -->
+      <div id="car-wrap">
+        <svg viewBox="0 0 500 900" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+          <ellipse cx="250" cy="820" rx="170" ry="40" fill="rgba(232,25,44,0.18)" />
+          <path
+            d="M130 700 C100 620 80 480 80 380 C80 220 130 120 180 70 C200 50 230 40 250 40 C270 40 300 50 320 70 C370 120 420 220 420 380 C420 480 400 620 370 700 C350 750 300 780 250 780 C200 780 150 750 130 700Z"
+            fill="#1a1a1a" stroke="#333" stroke-width="1.5" />
+          <path d="M250 55 L250 760" stroke="#E8192C" stroke-width="3" stroke-dasharray="12 8" opacity="0.5" />
+          <path
+            d="M175 200 C185 145 215 120 250 118 C285 120 315 145 325 200 C330 225 325 255 250 260 C175 255 170 225 175 200Z"
+            fill="#0d0d0d" stroke="#444" stroke-width="1" opacity="0.9" />
+          <path
+            d="M185 580 C190 610 215 630 250 632 C285 630 310 610 315 580 C320 555 315 530 250 528 C185 530 180 555 185 580Z"
+            fill="#0d0d0d" stroke="#444" stroke-width="1" opacity="0.9" />
+          <path d="M235 130 C238 100 262 100 265 130 L268 200 C268 215 232 215 232 200Z" fill="#222" stroke="#E8192C"
+            stroke-width="0.8" opacity="0.7" />
+          <path d="M135 195 C115 200 105 220 108 240 C115 250 135 248 148 235 C158 224 155 198 135 195Z" fill="#E8192C"
+            opacity="0.85" />
+          <path d="M138 200 C122 204 114 220 117 236 C122 244 138 242 149 231 C157 222 154 202 138 200Z" fill="#ff6070"
+            opacity="0.6" />
+          <path d="M365 195 C385 200 395 220 392 240 C385 250 365 248 352 235 C342 224 345 198 365 195Z" fill="#E8192C"
+            opacity="0.85" />
+          <path d="M362 200 C378 204 386 220 383 236 C378 244 362 242 351 231 C343 222 346 202 362 200Z" fill="#ff6070"
+            opacity="0.6" />
+          <path d="M140 660 C120 655 108 668 110 685 C114 700 135 705 155 695 C168 687 165 662 140 660Z" fill="#E8192C"
+            opacity="0.8" />
+          <path d="M360 660 C380 655 392 668 390 685 C386 700 365 705 345 695 C332 687 335 662 360 660Z" fill="#E8192C"
+            opacity="0.8" />
+          <rect x="68" y="260" width="60" height="110" rx="12" fill="#111" stroke="#444" stroke-width="1.5" />
+          <rect x="75" y="268" width="46" height="94" rx="9" fill="#1e1e1e" />
+          <circle cx="98" cy="315" r="28" fill="#0a0a0a" stroke="#555" stroke-width="1.5" />
+          <circle cx="98" cy="315" r="14" fill="#1a1a1a" />
+          <circle cx="98" cy="315" r="4" fill="#E8192C" />
+          <rect x="372" y="260" width="60" height="110" rx="12" fill="#111" stroke="#444" stroke-width="1.5" />
+          <rect x="379" y="268" width="46" height="94" rx="9" fill="#1e1e1e" />
+          <circle cx="402" cy="315" r="28" fill="#0a0a0a" stroke="#555" stroke-width="1.5" />
+          <circle cx="402" cy="315" r="14" fill="#1a1a1a" />
+          <circle cx="402" cy="315" r="4" fill="#E8192C" />
+          <rect x="68" y="530" width="60" height="120" rx="12" fill="#111" stroke="#444" stroke-width="1.5" />
+          <rect x="75" y="538" width="46" height="104" rx="9" fill="#1e1e1e" />
+          <circle cx="98" cy="590" r="30" fill="#0a0a0a" stroke="#555" stroke-width="1.5" />
+          <circle cx="98" cy="590" r="15" fill="#1a1a1a" />
+          <circle cx="98" cy="590" r="4" fill="#E8192C" />
+          <rect x="372" y="530" width="60" height="120" rx="12" fill="#111" stroke="#444" stroke-width="1.5" />
+          <rect x="379" y="538" width="46" height="104" rx="9" fill="#1e1e1e" />
+          <circle cx="402" cy="590" r="30" fill="#0a0a0a" stroke="#555" stroke-width="1.5" />
+          <circle cx="402" cy="590" r="15" fill="#1a1a1a" />
+          <circle cx="402" cy="590" r="4" fill="#E8192C" />
+          <rect x="230" y="300" width="40" height="60" rx="6" fill="#222" stroke="#E8192C" stroke-width="0.8"
+            opacity="0.6" />
+          <rect x="240" y="308" width="20" height="8" rx="2" fill="#E8192C" opacity="0.4" />
+          <rect x="240" y="322" width="20" height="8" rx="2" fill="#E8192C" opacity="0.3" />
+          <rect x="240" y="336" width="20" height="8" rx="2" fill="#E8192C" opacity="0.2" />
+          <path d="M80 295 C72 295 66 300 65 308 C64 316 70 322 80 320 L90 316 L88 298Z" fill="#222" stroke="#444"
+            stroke-width="1" />
+          <path d="M420 295 C428 295 434 300 435 308 C436 316 430 322 420 320 L410 316 L412 298Z" fill="#222"
+            stroke="#444" stroke-width="1" />
+          <path d="M210 160 C215 130 250 125 250 125 C250 125 285 130 290 160" stroke="#555" stroke-width="0.8"
+            fill="none" />
+          <path d="M195 220 L305 220" stroke="#555" stroke-width="0.8" opacity="0.5" />
+          <path d="M95 350 L95 520" stroke="#E8192C" stroke-width="1.5" opacity="0.4" />
+          <path d="M405 350 L405 520" stroke="#E8192C" stroke-width="1.5" opacity="0.4" />
+        </svg>
+      </div>
+
+      <!-- Stats: hidden on load, revealed by scroll -->
+      <div class="stats-row" id="statsRow">
+        <div class="stat-item">
+          <div class="stat-value">58%</div>
+          <div class="stat-label">Increase in pick up point use</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">23%</div>
+          <div class="stat-label">Decreased in customer phone calls</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">27%</div>
+          <div class="stat-label">Increase in pick up point use</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">40%</div>
+          <div class="stat-label">Decreased in customer phone calls</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar: hidden on load, revealed by scroll -->
+    <div class="hero-bottom" id="heroBottom">
+      <div class="hero-bottom-inner">
+        <span class="bottom-text">Scroll to explore</span>
+        <div class="scroll-arrow">
+          <div class="scroll-line"></div>
+          <div class="scroll-tip"></div>
+        </div>
+        <span class="bottom-text">01 / 04</span>
+      </div>
+    </div>
+
+  </section>
+
+  <div style="height:100vh;background:var(--dark);display:flex;align-items:center;justify-content:center;">
+    <h2
+      style="font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,7vw,100px);letter-spacing:0.2em;color:rgba(255,255,255,0.06);">
+      NEXT SECTION</h2>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
